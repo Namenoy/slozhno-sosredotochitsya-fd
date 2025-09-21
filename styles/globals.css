@@ -35,6 +35,9 @@ picture {
 
 button,
 a {
+  outline: none;
+  text-decoration: none;
+  border: none;
   color: currentColor;
   font-family: inherit;
   font-size: inherit;
