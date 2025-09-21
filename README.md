@@ -1,1 +1,1 @@
-git@github.com:Namenoy/slozhno-sosredotochitsya-fd.git
+https://github.com/Namenoy/posmotri-v-okno-fd.git
