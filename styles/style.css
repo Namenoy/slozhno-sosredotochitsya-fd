@@ -38,6 +38,7 @@ header {
 
 .header__theme-menu-button {
   display: flex;
+  color: var(--button-text-color, #FF0070);
   position: relative;
   background-color: transparent;
   inline-size: 70px;
@@ -49,10 +50,11 @@ header {
   font-family: var(--main-font, "IBM Plex Mono"), sans-serif;
   font-weight: var(--font-weight-normal, 400);
   cursor: pointer;
+  text-transform: lowercase;
 }
 
 .header__theme-menu-button:hover {
-  border: 1px solid #FF007066;
+  border: 1px solid var(--button-hover-color, #FF007066);
 }
 
 .header__theme-menu-button:focus-visible {
@@ -63,7 +65,7 @@ header {
   display: inline-block;
   outline: none;
   border: none;
-  border: 1px solid var(--accent-colors, #FF0070);
+  border: 1px solid var(--button-active-color, #FF0070);
   pointer-events: none;
 }
 
@@ -85,7 +87,7 @@ a {
 }
 
 a:hover {
-  text-decoration: underline;
+  border-bottom: 1px solid var(--hover-color, #F1B2CE);
   text-shadow: 2px 2px 0 var(--text-shadow-color, #FF0070);
 }
 
@@ -135,7 +137,7 @@ a:focus-visible {
   display: block;
   padding-left: 10px;
   font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
-  margin-top: 5px;
+  margin-top: 8px;
   font-weight: var(--font-weight-bold, 700);
   font-family: var(--main-font, "IBM Plex Mono"), sans-serif;
   line-height: 83%;
@@ -158,15 +160,14 @@ a:focus-visible {
   display: inline-flex;
   padding: 0 10px 0 0;
   width: 354px;
-  margin: -8px 10px 5px 10px;
-  min-height: 117px;
+  margin: 0 10px 0px 10px;
+  margin-bottom: 8px;
   height: fit-content;
   justify-self: end;
+  color: var(--color-text, #000028);
 }
 
-.question__title,
-.question__main-title,
-.question__answer-title {
+.titles {
   display: block;
   white-space: wrap;
   padding: 40px 0 20px 0;
@@ -174,9 +175,7 @@ a:focus-visible {
   color: var(--title-color, #FF0070);
 }
 
-.question__text,
-.question__answer-text,
-.main-advice-text {
+.texts {
   background-color: inherit;
   color: var(--paragraph-color, #F1B2CE);
   font-size: var(--main-fonts-size, 18px);
@@ -214,7 +213,7 @@ a:focus-visible {
 }
 
 .gallery_title {
-  margin-top: 40px;
+  margin-top: 29px;
   color: var(--header-color, #000);
 }
 
@@ -235,29 +234,55 @@ a:focus-visible {
 .footer {
   position: relative;
   display: flex;
-  margin-top: 60px;
+  margin-top: 40px;
   justify-content: center;
   align-items: center;
-  min-height: 1024px;
+  height: 100vh;
+  min-height: 668px;
   width: 100%;
 }
 
 .footer__title {
-  font-size: 116px;
+  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
   margin-top: 5px;
   font-weight: var(--font-weight-bold, 700);
   font-family: var(--main-font, "IBM Plex Mono"), sans-serif;
   line-height: 83%;
   color: var(--accent-pink, #DB00FF);
-  text-shadow: 4px 4px 0 var(--text-shadow-color, #FF0070);
+  text-shadow: 4px 4px 0 #FF0070;
 }
 
 @media (width >=768px) {
 
+  .decorated-zone::before {
+    left: 20px;
+    bottom: 20px;
+  }
+
+
+  .decorated-zone::after {
+    right: 20px;
+    top: 20px;
+  }
+
+  .header__record {
+    right: 48px;
+    top: 20px;
+  }
+
+
   .header__text {
     width: 364px;
     margin-right: 20px;
-    margin-bottom: 12px;
+    margin-bottom: 18px;
+  }
+
+  .footer {
+    margin-top: 48px;
+  }
+
+  .footer__title {
+    font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
   }
 
   .header__title {
@@ -271,8 +296,7 @@ a:focus-visible {
     padding-right: 20px;
   }
 
-  .question,
-  .main-advice {
+  .sections {
     display: grid;
     grid-template-columns: min-content 1fr;
     grid-template-rows: repeat(4, minmax(fit-content, 1fr));
@@ -352,15 +376,10 @@ a:focus-visible {
     padding: 0 10px;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3, 1fr);
     block-size: auto;
   }
 
-  .sunset,
-  .ice-creams,
-  .video-tape,
-  .street,
-  .books {
+  .images-size {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -394,9 +413,34 @@ a:focus-visible {
 }
 
 @media (width >=1024px) {
+
+  .question {
+    grid-template-columns: fit-content 1fr;
+  }
+
+  .main__title {
+    min-width: 340px;
+    margin-right: 5px;
+  }
+
+  .question__title {
+    min-width: 310px;
+    margin: 0;
+    padding: 0 0 0 20px;
+    margin-right: 35px;
+  }
+
+  .question__answer-title {
+    min-width: 350px;
+  }
+
   .header__text {
     min-width: 491px;
     min-height: auto;
+  }
+
+  .header__title {
+    padding-top: 147px;
   }
 
   .header__theme-menu-list {
@@ -411,13 +455,13 @@ a:focus-visible {
     padding: 0;
   }
 
-  .flex_3-columns {
+  .question-box {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(2, fit-content);
   }
 
-  .flex_3-columns .question__header {
+  .question-box .question__header {
     grid-template-columns: 1;
     grid-row: 1;
   }

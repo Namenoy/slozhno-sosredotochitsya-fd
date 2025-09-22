@@ -16,5 +16,9 @@
   --color-text: #000028;
   --text-shadow-color: #FF0070;
   --decorated-color: #FF0070;
-  --focus-color:#FF0070;
+  --focus-color: #FF0070;
+  --hover-color: #F1B2CE;
+  --button-hover-color: #FF007066;
+  --button-active-color: #FF0070;
+  --button-text-color: #FF0070;
 }
