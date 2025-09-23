@@ -118,6 +118,7 @@ a:focus-visible {
   text-transform: uppercase;
   right: 38px;
   top: 10px;
+  color: #FF0070;
 }
 
 .header__record::before {
@@ -165,6 +166,7 @@ a:focus-visible {
   height: fit-content;
   justify-self: end;
   color: var(--color-text, #000028);
+  background-color: var(--header-bg-color, #FF0070);
 }
 
 .titles {
@@ -190,8 +192,10 @@ a:focus-visible {
 }
 
 .question__header {
-  color: var(--header-color, #000);
+  color: var(--header-color, #000028);
   margin-bottom: 5px;
+  background-color: var(--header-bg-color, #FF0070);
+  ;
 }
 
 .main__title {
@@ -203,18 +207,24 @@ a:focus-visible {
 }
 
 .main__about {
-  color: var(--header-color, #000);
+  color: var(--header-color, #000028);
   margin-bottom: 20px;
+  background-color: var(--header-bg-color, #FF0070);
+  ;
 }
 
 .main__text {
   margin-bottom: 5px;
   color: var(--color-text, #000028);
+  background-color: var(--header-bg-color, #FF0070);
+  ;
 }
 
 .gallery_title {
   margin-top: 29px;
-  color: var(--header-color, #000);
+  color: var(--header-color, #000028);
+  background-color: var(--header-bg-color, #FF0070);
+  ;
 }
 
 .gallery {

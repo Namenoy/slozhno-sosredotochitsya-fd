@@ -12,7 +12,7 @@
   --black-color: #000;
   --title-color: #ff0070;
   --paragraph-color: var(--light-pink, #F1B2CE);
-  --header-color: var(--black-color, #000);
+  --header-color: #000028;
   --color-text: #000028;
   --text-shadow-color: #FF0070;
   --decorated-color: #FF0070;
@@ -21,4 +21,9 @@
   --button-hover-color: #FF007066;
   --button-active-color: #FF0070;
   --button-text-color: #FF0070;
+  --header-bg-color: #FF0070;
+}
+
+.theme-dark .header__record {
+  display: flex;
 }
