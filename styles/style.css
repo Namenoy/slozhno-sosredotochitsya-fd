@@ -195,7 +195,6 @@ a:focus-visible {
   color: var(--header-color, #000028);
   margin-bottom: 5px;
   background-color: var(--header-bg-color, #FF0070);
-  ;
 }
 
 .main__title {
@@ -210,21 +209,20 @@ a:focus-visible {
   color: var(--header-color, #000028);
   margin-bottom: 20px;
   background-color: var(--header-bg-color, #FF0070);
-  ;
 }
 
 .main__text {
   margin-bottom: 5px;
   color: var(--color-text, #000028);
   background-color: var(--header-bg-color, #FF0070);
-  ;
+  font-weight: 400;
+  font-style: normal;
 }
 
 .gallery_title {
   margin-top: 29px;
   color: var(--header-color, #000028);
   background-color: var(--header-bg-color, #FF0070);
-  ;
 }
 
 .gallery {
